@@ -1,59 +1,31 @@
-function calculateVolumeAndArea(number) {
+// function getTimeFromMinutes (totalMinutes){
+//     if (typeof (totalMinutes) != 'number' || !Number.isInteger(totalMinutes) || totalMinutes < 0){
+//         return "Ошибка, проверьте данные";
+//     }
 
+//     let hours = Math.floor(totalMinutes / 60);
+//     let minutes = totalMinutes % 60;
+//     let result = "";
     
-    if (typeof(number) == 'number' && Number.isInteger(number) && number > 0){
-        let volume = number * number * number;
-        let cubeSurface = (6 * number) * number;
-        let finalResult = 'Объем куба: ' + volume + ', площадь всей поверхности: '+ cubeSurface;
-        return finalResult;
-    } else {
-        return  'При вычислении произошла ошибка';
-    }
-}
+//     switch (hours){
+//         case 1: 
+//         result = "час";
+//         break;
 
-console.log (calculateVolumeAndArea(5));
-
-function getCoupeNumber(number) {
+//         case 2:
+//         case 3:
+//         case 4:
+//             result = "часа";
+//             break;
         
-        if (number === 0 || number > 36){
-        return 'Таких мест в вагоне не существует';
-    }
-        if (typeof(number) == 'number' && number > 0 && Number.isInteger(number)){
+//         default: 
+//             result = "часов";
+//     }
 
-            if (number >= 1 && number <= 4){
-                return 1;
-            } 
-            else if (number >= 5 && number <= 8 ){
-                return 2;
-            }
-            else if (number >= 9 && number <= 12){
-                return 3;
-            }
-            else if (number >= 13 && number <= 16){
-                return 4;
-            }
-            else if (number >= 17 && number <= 20){
-                return 5;
-            }
-            else if (number >= 21 && number <= 24){
-                return 6;
-            }
-            else if (number >= 25 && number <= 28){
-                return 7;
-            }
-            else if (number >= 29 && number <= 32){
-                return 8;
-            }
-             else if (number >= 33 && number <= 36){
-                return 9;
-             }
-}       else {
-    return 'Ошибка. Проверьте правильность введенного номера места';
-}
-}
+//     return `Это ${hours} ${result} и ${minutes} минут`;
 
+// }
 
-
-
+// console.log (getTimeFromMinutes(-150));
 
 
