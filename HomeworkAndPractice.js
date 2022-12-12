@@ -1,31 +1,60 @@
-// function getTimeFromMinutes (totalMinutes){
-//     if (typeof (totalMinutes) != 'number' || !Number.isInteger(totalMinutes) || totalMinutes < 0){
-//         return "Ошибка, проверьте данные";
-//     }
+function calculator (str){
+    let local1 = parseInt(str.slice(0, 1)); 
+    let local2 = str.slice (2, 3);
+    let local3 = parseInt(str.substring (4, 5));
+    if (local2 == '+'){
+        return local1 + local3;
+    } else if (local2 == '-'){
+        return local1 - local3;
+    }
+}
 
-//     let hours = Math.floor(totalMinutes / 60);
-//     let minutes = totalMinutes % 60;
-//     let result = "";
-    
-//     switch (hours){
-//         case 1: 
-//         result = "час";
-//         break;
-
-//         case 2:
-//         case 3:
-//         case 4:
-//             result = "часа";
-//             break;
-        
-//         default: 
-//             result = "часов";
-//     }
-
-//     return `Это ${hours} ${result} и ${minutes} минут`;
-
-// }
-
-// console.log (getTimeFromMinutes(-150));
+function fibonachi (number){
+    let first = 0;
+    let second = 1;
+    let result = '';
 
 
+    for (let i = 0; i < number; i ++){
+
+    }
+}
+
+function fib(num) {
+    if (typeof(num) !== 'number' || num <= 0 || !Number.isInteger(num)) {
+        return "";
+    }
+
+    let result = '';
+    let first = 0;
+    let second = 1;
+
+    for (let i = 0; i < num; i++) {
+        if (i + 1 === num) {
+            result += `${first}`;
+            // Без пробела в конце
+        } else {
+            result += `${first} `;
+        }
+
+        let third = first + second;
+        first = second;
+        second = third;
+    }
+
+    return result;
+}
+
+function fibonachi (number){
+    let result = '';
+    let first = 0;
+    let second = 1; 
+
+    for (let i = 0; i < number; i ++){
+        if (i + 1 === number){
+            result += `${number};`
+        } else {
+            result += `${number}`;
+        }
+    }
+}
